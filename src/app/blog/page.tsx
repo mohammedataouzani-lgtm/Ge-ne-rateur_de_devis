@@ -27,7 +27,7 @@ export default function BlogPage() {
                             </Link>
                         </h2>
                         <p className="text-gray-600 mb-4">
-                            Tout ce que vous devez savoir pour être en conformité avec la loi française et éviter les amendes.
+                            Tout ce que vous devez savoir pour être en conformité avec la loi française.
                         </p>
                         <Link href="#" className="text-sm font-medium text-blue-600 hover:underlin">Lire la suite →</Link>
                     </div>
