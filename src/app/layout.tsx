@@ -49,6 +49,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-P6S4NPQW');`,
           }}
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZN350EC2N3"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-ZN350EC2N3');
+          `}
+        </Script>
         <Header />
         {children}
       </body>
