@@ -1,0 +1,199 @@
+.wrapper {
+    display: flex;
+    gap: var(--spacing-lg);
+    min-height: calc(100vh - 100px);
+}
+
+.formContainer {
+    flex: 1;
+    background: var(--background);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+}
+
+.previewContainer {
+    flex: 1;
+    background: #f8f9fa;
+    /* Paper background context */
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+    position: sticky;
+    top: 100px;
+    max-height: calc(100vh - 120px);
+    overflow: auto;
+}
+
+.placeholderPreview {
+    background: white;
+    width: 100%;
+    max-width: 210mm;
+    /* A4 width approx */
+    aspect-ratio: 210/297;
+    padding: 40px;
+    box-shadow: var(--shadow-md);
+    font-size: 12px;
+}
+
+.steps {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    padding: var(--spacing-sm);
+    gap: var(--spacing-sm);
+    overflow-x: auto;
+}
+
+.step {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #666;
+    white-space: nowrap;
+}
+
+.active {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+.content {
+    flex: 1;
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+}
+
+.stepContent {
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border);
+}
+
+.input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    margin-top: 0.25rem;
+}
+
+@media (max-width: 1024px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .previewContainer {
+        display: none;
+        /* Hide preview on mobile or make it a modal */
+    }
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-sm);
+}
+
+@media (max-width: 640px) {
+    .grid2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.formGroup {
+    margin-bottom: var(--spacing-sm);
+}
+
+.tableResponsive {
+    overflow-x: auto;
+}
+
+.itemsTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.itemsTable th {
+    text-align: left;
+    padding: 0.5rem;
+    font-weight: 600;
+    color: #666;
+    border-bottom: 1px solid var(--border);
+}
+
+.itemsTable td {
+    padding: 0.5rem 0.25rem;
+    vertical-align: top;
+}
+
+.logoUploadContainer {
+    margin-bottom: var(--spacing-sm);
+}
+
+.uploadButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+    border: 2px dashed var(--border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #f9fafb;
+}
+
+.uploadButton:hover {
+    background: #f3f4f6;
+    border-color: var(--primary);
+}
+
+.logoPreview {
+    position: relative;
+    width: fit-content;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 4px;
+    background: white;
+}
+
+.uploadedLogo {
+    max-height: 80px;
+    max-width: 200px;
+    object-fit: contain;
+    display: block;
+}
+
+.removeLogoBtn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    padding: 2px;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.removeLogoBtn:hover {
+    color: red;
+    border-color: red;
+}

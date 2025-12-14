@@ -1,0 +1,179 @@
+.previewPage {
+    width: 100%;
+    height: 100%;
+    background: white;
+    color: #333;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.companyInfo {
+    display: flex;
+    gap: 15px;
+}
+
+.logo {
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.placeholderLogo {
+    width: 60px;
+    height: 60px;
+    background: #eee;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.companyName {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    color: var(--primary);
+}
+
+.companyDetails {
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.quoteMeta {
+    text-align: right;
+}
+
+.quoteTitle {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #333;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+}
+
+.metaRow {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+.clientSection {
+    margin-bottom: 40px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+    width: 50%;
+    margin-left: auto;
+    /* Align right */
+}
+
+.clientLabel {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.clientInfo {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.table th {
+    background: #f3f4f6;
+    padding: 10px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #555;
+    border-bottom: 2px solid #ddd;
+}
+
+.table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.totalsSection {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+}
+
+.totals {
+    width: 250px;
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 0.9rem;
+}
+
+.totalTTC {
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-top: 2px solid #eee;
+    padding-top: 10px;
+    margin-top: 5px;
+    color: var(--primary);
+}
+
+.footer {
+    margin-top: auto;
+    font-size: 0.8rem;
+    color: #666;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.terms {
+    margin-bottom: 15px;
+    font-style: italic;
+    white-space: pre-wrap;
+}
+
+.legalFooter {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #999;
+}
+
+.signatureArea {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.signatureBox {
+    border: 1px solid #ddd;
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+.signatureMention {
+    text-align: center;
+    margin-top: 30px;
+    color: #ccc;
+}
