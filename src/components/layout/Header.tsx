@@ -19,6 +19,7 @@ export default function Header() {
                     <nav className={styles.nav}>
                         <Link href="/" className={styles.logo}>DevisFacile</Link>
                         <div className={styles.links}>
+                            <Link href="/blog" className={`${styles.logo} !text-base !font-medium`}>Blog</Link>
                             <Link href="/faq" className={`${styles.logo} !text-base !font-medium`}>Aide</Link>
                             {!isGenerator && (
                                 <Link href="/generateur" className="btn btn-primary">

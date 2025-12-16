@@ -13,6 +13,28 @@ export const metadata: Metadata = {
   keywords: ["devis", "facture", "générateur de devis", "auto-entrepreneur", "freelance", "artisan", "gratuit", "pdf"],
   authors: [{ name: "DevisFacile" }],
   robots: "index, follow",
+  openGraph: {
+    title: "Générateur de Devis Gratuit pour Auto-Entrepreneurs",
+    description: "Créez des devis professionnels et conformes en quelques clics. Outil gratuit pour indépendants.",
+    url: "https://devis-facile.fr",
+    siteName: "DevisFacile",
+    images: [
+      {
+        url: "/og-image.jpg", // Needs to be added to public
+        width: 1200,
+        height: 630,
+        alt: "DevisFacile - Générateur de devis gratuit",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Générateur de Devis Gratuit",
+    description: "Créez vos devis professionnels gratuitement en 2 minutes.",
+    images: ["/og-image.jpg"], // Ensure this exists or use a default one
+  },
 };
 
 export const viewport = {
