@@ -15,7 +15,7 @@ const initialQuote: QuoteData = {
     id: "",
     company: { name: "", address: "", siret: "", email: "", phone: "" },
     client: { name: "", address: "", email: "" },
-    items: [{ id: "1", description: "Prestation type", quantity: 1, unitPrice: 0, vatRate: 20 }],
+    items: [{ id: "1", description: "Prestation de services", quantity: 1, unitPrice: 500, vatRate: 20 }],
     settings: {
         date: new Date().toISOString().split('T')[0],
         validityDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],

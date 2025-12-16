@@ -16,56 +16,18 @@ export default function BlogPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Main Content */}
                 <div className="lg:col-span-2 space-y-8">
-                    {/* Article Card 1 */}
-                    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                        <div className="flex items-center gap-2 text-blue-600 mb-2">
-                            <BookOpen size={16} /> <span>Tutoriel</span>
+                    <div className="bg-blue-50 border border-blue-100 rounded-lg p-8 text-center">
+                        <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-blue-600">
+                            <BookOpen size={32} />
                         </div>
-                        <h2 className="text-xl font-bold mb-2">
-                            <Link href="#" className="hover:text-blue-600">
-                                Les mentions obligatoires sur un devis en 2025
-                            </Link>
-                        </h2>
-                        <p className="text-gray-600 mb-4">
-                            Tout ce que vous devez savoir pour être en conformité avec la loi française.
+                        <h2 className="text-2xl font-bold mb-2">Blog en construction</h2>
+                        <p className="text-gray-600 max-w-md mx-auto">
+                            Nos experts travaillent actuellement sur la rédaction d'articles pour vous aider à mieux gérer votre auto-entreprise. Revenez bientôt !
                         </p>
-                        <Link href="#" className="text-sm font-medium text-blue-600 hover:underlin">Lire la suite →</Link>
-                    </div>
-
-                    {/* Article Card 2 */}
-                    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                        <div className="flex items-center gap-2 text-blue-600 mb-2">
-                            <BookOpen size={16} /> <span>Gestion</span>
-                        </div>
-                        <h2 className="text-xl font-bold mb-2">
-                            <Link href="#" className="hover:text-blue-600">
-                                Devis payant ou gratuit : que choisir ?
-                            </Link>
-                        </h2>
-                        <p className="text-gray-600 mb-4">
-                            Dans certains secteurs, il est d'usage de facturer le devis. Découvrez quand et comment le faire.
-                        </p>
-                        <Link href="#" className="text-sm font-medium text-blue-600 hover:underlin">Lire la suite →</Link>
                     </div>
 
                     {/* Ad in content */}
                     <AdPlaceholder format="rectangle" className="mx-auto" />
-
-                    {/* Article Card 3 */}
-                    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                        <div className="flex items-center gap-2 text-blue-600 mb-2">
-                            <BookOpen size={16} /> <span>Auto-Entrepreneur</span>
-                        </div>
-                        <h2 className="text-xl font-bold mb-2">
-                            <Link href="#" className="hover:text-blue-600">
-                                TVA non applicable : l'article 293 B du CGI expliqué
-                            </Link>
-                        </h2>
-                        <p className="text-gray-600 mb-4">
-                            Comprendre la franchise en base de TVA et comment l'indiquer correctement sur vos documents.
-                        </p>
-                        <Link href="#" className="text-sm font-medium text-blue-600 hover:underlin">Lire la suite →</Link>
-                    </div>
                 </div>
 
                 {/* Sidebar */}

@@ -24,7 +24,7 @@ export default function LivePreview({ data }: Props) {
                         <div className={styles.placeholderLogo}>{company.name?.charAt(0) || "L"}</div>
                     )}
                     <div>
-                        <h4 className={styles.companyName}>{company.name || "Votre Entreprise"}</h4>
+                        <h4 className={styles.companyName}>{company.name || "Votre Société"}</h4>
                         <div className={styles.companyDetails}>
                             {company.address}<br />
                             {company.email} • {company.phone}<br />
@@ -51,7 +51,7 @@ export default function LivePreview({ data }: Props) {
             <div className={styles.clientSection}>
                 <div className={styles.clientLabel}>Destinataire :</div>
                 <div className={styles.clientInfo}>
-                    <strong>{client.name || "Nom du Client"}</strong><br />
+                    <strong>{client.name || "Client Exemple"}</strong><br />
                     {client.address}<br />
                     {client.email}<br />
                     {client.vatNumber && <>TVA: {client.vatNumber}</>}
