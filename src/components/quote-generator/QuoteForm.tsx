@@ -32,6 +32,13 @@ const initialQuote: QuoteData = {
 export default function QuoteForm() {
     const [step, setStep] = useState(1);
     const [data, setData] = useState<QuoteData>(initialQuote);
+    const [quoteCount, setQuoteCount] = useState(0);
+
+    // Load quote count from localStorage on mount
+    useEffect(() => {
+        const count = localStorage.getItem('quoteCount');
+        setQuoteCount(count ? parseInt(count, 10) : 0);
+    }, []);
 
     const calculateTotals = (items: QuoteItem[], isVatExempt: boolean) => {
         const totalHT = items.reduce((acc, item) => acc + item.quantity * item.unitPrice, 0);
@@ -70,6 +77,21 @@ export default function QuoteForm() {
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
+
+            // Track quote generation
+            // 1. Google Analytics event
+            if (typeof window !== 'undefined' && (window as any).gtag) {
+                (window as any).gtag('event', 'generate_quote', {
+                    event_category: 'Quote',
+                    event_label: data.settings.quoteNumber,
+                    value: Math.round(data.totalTTC)
+                });
+            }
+
+            // 2. Increment localStorage counter
+            const newCount = quoteCount + 1;
+            localStorage.setItem('quoteCount', newCount.toString());
+            setQuoteCount(newCount);
         } catch (error) {
             console.error("Error generating PDF:", error);
             alert("Une erreur est survenue lors de la génération du PDF.");
@@ -79,6 +101,27 @@ export default function QuoteForm() {
     return (
         <div className={styles.wrapper}>
             <div className={styles.formContainer}>
+                {/* Quote Counter Badge */}
+                {quoteCount > 0 && (
+                    <div style={{
+                        position: 'absolute',
+                        top: '1rem',
+                        right: '1rem',
+                        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                        color: 'white',
+                        padding: '0.5rem 1rem',
+                        borderRadius: '20px',
+                        fontSize: '0.875rem',
+                        fontWeight: '600',
+                        boxShadow: '0 2px 8px rgba(102, 126, 234, 0.3)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.5rem'
+                    }}>
+                        <span>📊</span>
+                        <span>{quoteCount} devis généré{quoteCount > 1 ? 's' : ''}</span>
+                    </div>
+                )}
                 {/* ... steps ... */}
                 <div className={styles.steps}>
                     <div className={`${styles.step} ${step >= 1 ? styles.active : ''}`}>1. Entreprise</div>
